@@ -1,0 +1,8 @@
+{
+    "unreal": {
+        "environment": [
+            "python_env.json",
+            "unreal_env.json"
+        ]
+    }
+}
