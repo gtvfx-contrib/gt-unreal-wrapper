@@ -1,6 +1,6 @@
 {
-    "+=PYTHONPATH": "{$__PACKAGE__}/py",
-    "+=PATH": "{$__PACKAGE__}/bin",
+    "+=PYTHONPATH": "{$__BUNDLE__}/py",
+    "+=PATH": "{$__BUNDLE__}/bin",
     "UE_PYTHONPATH": "{$PYTHONPATH}",
     "UE_BIN": "D:/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe"
 }
