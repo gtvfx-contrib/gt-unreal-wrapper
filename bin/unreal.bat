@@ -5,4 +5,4 @@ if not exist "%UE_BIN%" (
     goto :eof
 )
 
-start "" "%UE_BIN%"
+"%UE_BIN%" %*
