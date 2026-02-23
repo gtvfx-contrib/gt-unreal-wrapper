@@ -7,5 +7,5 @@ if not exist "%UE_BIN%" (
     goto :eof
 )
 
-echo Launching Unreal Editor...
+echo Launching Unreal Editor...UE_5.4
 "%UE_BIN%" %*

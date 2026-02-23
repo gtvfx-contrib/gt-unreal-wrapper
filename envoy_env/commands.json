@@ -5,6 +5,12 @@
             "unreal_env.json"
         ]
     },
+    "unreal54": {
+        "environment": [
+            "unreal"
+        ],
+        "alias": ["urneal54.bat"]
+    },
     "unreal57": {
         "environment": [
             "unreal"
