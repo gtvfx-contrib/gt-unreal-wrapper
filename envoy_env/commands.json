@@ -4,5 +4,11 @@
             "python_env.json",
             "unreal_env.json"
         ]
+    },
+    "unreal57": {
+        "environment": [
+            "unreal"
+        ],
+        "alias": ["urneal57.bat"]
     }
 }
