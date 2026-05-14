@@ -1,20 +1,13 @@
 {
     "unreal": {
         "environment": [
-            "python_env.json",
+            "python_env.json"
+        ],
+        "alias": ["python", "-m", "gt.unreal.wrapper"]
+    },
+    "UnrealEditor": {
+        "environment": [
             "unreal_env.json"
         ]
-    },
-    "unreal54": {
-        "environment": [
-            "unreal"
-        ],
-        "alias": ["urneal54.bat"]
-    },
-    "unreal57": {
-        "environment": [
-            "unreal"
-        ],
-        "alias": ["urneal57.bat"]
     }
 }
