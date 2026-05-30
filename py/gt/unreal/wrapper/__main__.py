@@ -82,7 +82,7 @@ else:
     log.debug("No additional arguments provided")
 
 log.info("Launching Unreal Editor...")
-log.debug(f"Command: {' '.join(['envoy'] + unreal_cmd)}")
+log.info(f"Command: {' '.join(['envoy'] + unreal_cmd)}")
 
 # Pre-build the UnrealEditor environment so we can inspect it before spawning.
 # This also avoids a second bundle-discovery pass inside proc.spawn().
@@ -92,7 +92,6 @@ log.debug("UE_PYTHONPATH: %s", built_env.get('UE_PYTHONPATH', '<NOT SET>'))
 log.debug("PYTHONPATH:    %s", built_env.get('PYTHONPATH', '<NOT SET>'))
 
 # Launch the application (reuses the already-built environment)
-log.info("cmd: %s", ' '.join(unreal_cmd))
 proc = ue_env.spawn(
     unreal_cmd[1:],
     stdout=envoy.proc.PIPE,
