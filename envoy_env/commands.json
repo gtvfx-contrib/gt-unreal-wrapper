@@ -1,0 +1,13 @@
+{
+    "unreal": {
+        "environment": [
+            "python"
+        ],
+        "alias": ["python", "-m", "gt.unreal.wrapper"]
+    },
+    "UnrealEditor": {
+        "environment": [
+            "unreal_env.json"
+        ]
+    }
+}

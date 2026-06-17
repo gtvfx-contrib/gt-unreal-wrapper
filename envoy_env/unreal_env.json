@@ -1,0 +1,9 @@
+{
+    "environment": {
+        "+=UE_PYTHONPATH": "${PYTHONPATH}"
+    },
+    "environment_allowlist": [
+        "UE_PYTHONPATH",
+        "PYTHONPATH"
+    ]
+}
