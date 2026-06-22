@@ -1,12 +1,12 @@
 
-"""Command for gt.unreal.wrapper"""
+"""Command for gt.unreal_init.wrapper"""
 import argparse
 import logging
 import sys
 
 import envoy
 
-from . import _initialize as unreal
+from . import _initialize as unreal_init
 
 
 log = logging.getLogger(__name__)
@@ -32,7 +32,7 @@ log.info("Running Unreal Wrapper...")
 
 
 # Resolve the executable path
-unreal_exe = unreal.resolveUnrealExe(version=args.version)
+unreal_exe = unreal_init.resolveUnrealExe(version=args.version)
 
 if unreal_exe is None or not unreal_exe.exists():
     log.error(f"Unable to find executable for Unreal Editor at: {unreal_exe}")
@@ -40,9 +40,9 @@ if unreal_exe is None or not unreal_exe.exists():
 
 
 # # Check DX Version
-# if not unreal.isDxCurrent():
+# if not unreal_init.isDxCurrent():
 #     log.info("DirectX needs to be updated. Running setup...")
-#     proc = envoy.proc.spawn(["unreal-setup"],
+#     proc = envoy.proc.spawn(["unreal_init-setup"],
 #                          inheritenv=False,
 #                          stdout=envoy.proc.PIPE,
 #                          stderr=envoy.proc.STDOUT)
@@ -51,21 +51,21 @@ if unreal_exe is None or not unreal_exe.exists():
 #     result = proc.returncode
 
 #     if result:
-#         log.error("Error running unreal-setup...")
-#         raise RuntimeError("unreal-setup failed")
+#         log.error("Error running unreal_init-setup...")
+#         raise RuntimeError("unreal_init-setup failed")
     
 #     log.info("DirectX updated successfully.")
 
 
 # Update registry for project compatibility
-if not unreal.isBuildRegistered(version=args.version):
+if not unreal_init.isBuildRegistered(version=args.version):
     log.info("Unreal Editor version not registered for project compatibility. Processing...")
     
     # Remove any currently registered builds. Unreal seems to only allow one here.
-    unreal.removeRegisteredBuilds()
+    unreal_init.removeRegisteredBuilds()
     
     # Register the current build
-    unreal.registerBuild(version=args.version)
+    unreal_init.registerBuild(version=args.version)
 
 
 
