@@ -38,7 +38,7 @@ log = logging.getLogger(__name__)
 
 UNREAL_BUILDS_PATH = (winreg.HKEY_CURRENT_USER, r"Software\Epic Games\Unreal Engine\Builds")
 DX_REG_PATH = (winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Microsoft\DirectX")
-UNREAL_ENV = envoy.get_environment("UnrealEditor")
+UNREAL_ENV = envoy.getEnvironment("UnrealEditor")
 
 
 
